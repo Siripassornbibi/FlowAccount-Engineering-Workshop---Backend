@@ -53,6 +53,11 @@ curl -X PUT http://127.0.0.1:8000/api/products/bulk-price-update \
   -d '{"items":[{"productId":1,"newPrice":50},{"productId":2,"newPrice":30}]}'
 ```
 
+** หรือแบบ test แบบ intergrate 
+```bash
+pytest -q
+```
+
 ## หมายเหตุการออกแบบ
 
 - **Model**: เก็บ `Product` เป็น dataclass และใช้ list ในหน่วยความจำแทนฐานข้อมูลจริง (`ProductStorage`), เพื่อให้รันทดสอบได้ทันทีโดยไม่ต้องต่อ DB
